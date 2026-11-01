@@ -1,0 +1,24 @@
+{
+  "otel_commit": "40cb2e516c60dd91796d909c7277e36a20c38b55",
+  "googleapis_commit": "ebd1d23ac613b177828dad42ad8dfb13ba498279",
+  "protobuf_ref": "v35.1",
+  "generator": "protobufjs 8.8.1 Root.load / toJSON",
+  "sources": {
+    "google/rpc/status.proto": "https://raw.githubusercontent.com/googleapis/googleapis/ebd1d23ac613b177828dad42ad8dfb13ba498279/google/rpc/status.proto",
+    "google/protobuf/any.proto": "https://raw.githubusercontent.com/protocolbuffers/protobuf/v35.1/src/google/protobuf/any.proto",
+    "LICENSE.opentelemetry": "https://raw.githubusercontent.com/open-telemetry/opentelemetry-proto/40cb2e516c60dd91796d909c7277e36a20c38b55/LICENSE",
+    "LICENSE.googleapis": "https://raw.githubusercontent.com/googleapis/googleapis/ebd1d23ac613b177828dad42ad8dfb13ba498279/LICENSE",
+    "LICENSE.protobuf": "https://raw.githubusercontent.com/protocolbuffers/protobuf/v35.1/LICENSE"
+  },
+  "sha256": {
+    "LICENSE.googleapis": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "LICENSE.opentelemetry": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "LICENSE.protobuf": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+    "google/rpc/status.proto": "f5bfd262e6705c7ae73f32e0ad8ee20ce8c0a2578df8c4f76ebf76b572f295ed",
+    "google/protobuf/any.proto": "8e56f61e3078e9232d39ce1b1bab28613783af8191f93a910c3617933f87a179",
+    "opentelemetry/proto/resource/v1/resource.proto": "34fe1c26b8959f09d97656348ae03b105d15a5f07ada0f8f1614ef5dff7d1569",
+    "opentelemetry/proto/common/v1/common.proto": "4c8c143ac8c190544a3d31dcd5719d6fbc943b89037faa1cef6015c76cbdefc1",
+    "opentelemetry/proto/collector/trace/v1/trace_service.proto": "03c8cc4e3e101087d884392d6eda32152ad5cd696e6344f50deaa59804a75c7a",
+    "opentelemetry/proto/trace/v1/trace.proto": "45a33961142210add67d583cc525702fb985afdbae181e6daf2143929bad0613"
+  }
+}

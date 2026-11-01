@@ -1,0 +1,14 @@
+resource_spans {
+ resource { attributes { key: "service.name" value { string_value: "web" } } }
+ scope_spans {
+  scope { name: "manual" version: "1" }
+  spans {
+   trace_id: "\x4b\xf9\x2f\x35\x77\xb3\x4d\xa6\xa3\xce\x92\x9d\x0e\x0e\x47\x36"
+   span_id: "\x00\xf0\x67\xaa\x0b\xa9\x02\xb7"
+   name: "checkout" kind: SPAN_KIND_SERVER flags: 257
+   start_time_unix_nano: 1793491200000000000 end_time_unix_nano: 1793491200123456789
+   attributes { key: "count" value { int_value: -9223372036854775808 } }
+   status { code: STATUS_CODE_OK }
+  }
+ }
+}

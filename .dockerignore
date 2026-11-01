@@ -1,0 +1,12 @@
+.git
+node_modules
+dist
+coverage
+artifacts
+.env*
+.DS_Store
+**/node_modules
+**/.next
+**/coverage
+**/test-results
+**/*.tsbuildinfo

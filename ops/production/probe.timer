@@ -1,0 +1,11 @@
+[Unit]
+Description=OneAster independent availability probe
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=30
+AccuracySec=1
+Unit=probe.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,16 @@
+{
+  "name": "@oneaster/telemetry-cli",
+  "version": "0.1.0",
+  "private": true,
+  "bin": {
+    "telemetry": "./src/main.ts"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@jridgewell/trace-mapping": "0.3.31",
+    "@oneaster/telemetry-protocol": "workspace:*"
+  }
+}

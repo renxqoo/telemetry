@@ -1,0 +1,59 @@
+groups:
+  - name: oneaster-telemetry
+    rules:
+      - alert: TelemetryConfigExpired
+        expr: telemetry_config_valid == 0
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: Telemetry authorization configuration has expired
+      - alert: TelemetryConfigExpiring
+        expr: telemetry_config_expires_at_seconds - time() < 3600
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: Telemetry authorization configuration expires within one hour
+      - alert: TelemetryErrorBudgetBurn
+        expr: sum by (job) (rate(telemetry_requests_total{route=~"/v1/(ingest/(browser|server)|(events|errors)(/:source/:id)?)",status=~"5.."}[5m])) / clamp_min(sum by (job) (rate(telemetry_requests_total{route=~"/v1/(ingest/(browser|server)|(events|errors)(/:source/:id)?)",status=~"2..|404|410|5.."}[5m])), 0.001) > 0.00144
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: Telemetry five minute failures exceed 14.4 times the 99.99 percent error budget
+      - alert: TelemetryLongErrorBudgetBurn
+        expr: sum by (job) (rate(telemetry_requests_total{route=~"/v1/(ingest/(browser|server)|(events|errors)(/:source/:id)?)",status=~"5.."}[1h])) / clamp_min(sum by (job) (rate(telemetry_requests_total{route=~"/v1/(ingest/(browser|server)|(events|errors)(/:source/:id)?)",status=~"2..|404|410|5.."}[1h])), 0.001) > 0.0006
+        for: 15m
+        labels:
+          severity: critical
+        annotations:
+          summary: Telemetry one hour failures exceed six times the error budget
+      - alert: TelemetryIngestLatency
+        expr: histogram_quantile(0.99, sum by (le) (rate(telemetry_request_duration_seconds_bucket{route="/v1/ingest/server"}[5m]))) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: Telemetry ingest p99 exceeds one second
+      - alert: TelemetryEndpointDown
+        expr: up{job=~"telemetry-collector|telemetry-query"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: A telemetry process cannot be scraped
+      - alert: TelemetryExternalProbeFailed
+        expr: telemetry_probe_success == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: External telemetry write or audited read failed
+      - alert: TelemetryExternalProbeStale
+        expr: time() - node_textfile_mtime_seconds{file=~".*telemetry[.]prom"} > 90
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: External telemetry probe stopped publishing results

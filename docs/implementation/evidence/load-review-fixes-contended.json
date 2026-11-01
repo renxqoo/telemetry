@@ -1,0 +1,143 @@
+{
+  "profile": "development",
+  "fault_domains": 1,
+  "node": "v26.9.0",
+  "postgres": "18.6 (Homebrew)",
+  "cpu": "Apple M4",
+  "logical_cpus": 10,
+  "host_memory_bytes": 17179869184,
+  "duration_ms": 601114.6664590001,
+  "target_duration_ms": 600000,
+  "target_events_per_second": 500,
+  "target_query_requests_per_second": 10,
+  "event_mix": "95% event / 5% error for batches of 20",
+  "mean_request_event_bytes": 1001.85,
+  "scheduled_events": 300000,
+  "acknowledged_events": 297320,
+  "stored_events": 297320,
+  "unique_events": 297320,
+  "query_requests": 6000,
+  "failures": {
+    "http_503_storage_unavailable": 1200,
+    "http_503_overloaded": 1480
+  },
+  "failure_samples": [
+    {
+      "at_ms": 501150.056542,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501188.15212499996,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501227.49762499996,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501268.30275,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501325.41079199995,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501352.82020899997,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501386.515625,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501426.85079199995,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501533.223917,
+      "reason": "http_503_overloaded",
+      "count": 20
+    },
+    {
+      "at_ms": 501575.277459,
+      "reason": "http_503_overloaded",
+      "count": 20
+    },
+    {
+      "at_ms": 501615.07129199995,
+      "reason": "http_503_overloaded",
+      "count": 20
+    },
+    {
+      "at_ms": 501649.912959,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501694.155959,
+      "reason": "http_503_overloaded",
+      "count": 20
+    },
+    {
+      "at_ms": 501710.4285,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501729.242584,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501770.518667,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501826.981209,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501853.96129199996,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501886.865459,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 501929.27787499997,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    }
+  ],
+  "event_loop_delay_max_ms": 19.415039,
+  "event_loop_delay_p99_ms": 12.754943,
+  "max_process_rss_bytes": 200638464,
+  "ingest": {
+    "requests": 14866,
+    "p50_ms": 9.086499999975786,
+    "p95_ms": 53.675875000000815,
+    "p99_ms": 91.0570000000007
+  },
+  "query": {
+    "requests": 6000,
+    "p50_ms": 3.9755000000004657,
+    "p95_ms": 7.397832999995444,
+    "p99_ms": 9.00441699998919
+  },
+  "interrupted": false,
+  "production_ha_verified": false
+}

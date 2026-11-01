@@ -1,0 +1,13 @@
+[Unit]
+Description=OneAster PostgreSQL weekly full backup
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=postgres
+EnvironmentFile=/etc/oneaster/backup.env
+ExecStart=/usr/bin/pgbackrest --config=/etc/oneaster/pgbackrest.conf --type=full backup
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true

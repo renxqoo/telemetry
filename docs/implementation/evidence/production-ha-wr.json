@@ -1,0 +1,215 @@
+{
+  "recorded_at": "2026-11-01T08:42:29.646Z",
+  "scope": ["events", "errors", "traces"],
+  "production_ha_verified": false,
+  "traces_implemented": false,
+  "docker_used": false,
+  "remote": {
+    "ssh_alias": "wr",
+    "root": "/opt/oneaster-validation.6fkfox52",
+    "os": "Ubuntu 24.04 x86_64",
+    "cpus": 2,
+    "memory_kib": 2015016,
+    "observed_fault_domains": 1,
+    "watchdog_device_present": false,
+    "node": "26.9.0",
+    "bun": "1.4.4",
+    "postgres": "18.6",
+    "checks": {
+      "lint": {
+        "exit_code": 0
+      },
+      "typecheck": {
+        "exit_code": 0
+      },
+      "build": {
+        "exit_code": 0
+      },
+      "integration": {
+        "exit_code": 0,
+        "test_files": 16,
+        "files_passed": 16,
+        "tests": 197,
+        "passed": 197,
+        "failed": 0,
+        "duration_seconds": 76.98,
+        "coverage_enabled": true,
+        "complete_coverage_gate_passed": true,
+        "log": "workspace/artifacts/production-ha/wr-pool-sql-validated.log"
+      },
+      "tls": {
+        "checks_passed": 10,
+        "scope": "three processes on one host; not cross-zone HA"
+      },
+      "browser": {
+        "executed": false
+      }
+    },
+    "coverage_scope": "packages/**/src as configured in vitest.config.ts",
+    "coverage": {
+      "statements": {
+        "total": 2335,
+        "covered": 2043,
+        "skipped": 0,
+        "pct": 87.49
+      },
+      "branches": {
+        "total": 1857,
+        "covered": 1572,
+        "skipped": 0,
+        "pct": 84.65
+      },
+      "functions": {
+        "total": 350,
+        "covered": 304,
+        "skipped": 0,
+        "pct": 86.85
+      },
+      "lines": {
+        "total": 2056,
+        "covered": 1876,
+        "skipped": 0,
+        "pct": 91.24
+      }
+    },
+    "coverage_thresholds": {
+      "statements": 75,
+      "branches": 65,
+      "functions": 75,
+      "lines": 75
+    },
+    "coverage_gate_passed": true,
+    "previous_failure_resolved": true,
+    "diagnosis": {
+      "cold_admission": "The original failure occurred while establishing and verifying a connection within the configured 20ms admission budget; this can legally fail. Setup now waits for one ready result within an absolute deadline.",
+      "sql_timeout": "The remaining connection admission budget incorrectly persisted as the session SQL timeout; data sessions now use statementTimeoutMs.",
+      "maintenance_test": "Audit visibility was checked before asynchronous backend cleanup completed; all assertions remain, ordered after observed backend exit. Emergency cancellation is disabled after the unknown/350ms assertions."
+    }
+  },
+  "local": {
+    "checks": {
+      "lint": {
+        "exit_code": 0
+      },
+      "typecheck": {
+        "exit_code": 0
+      },
+      "build": {
+        "exit_code": 0
+      },
+      "test": {
+        "exit_code": 0,
+        "test_files": 16,
+        "vitest_passed": 197,
+        "playwright_passed": 4
+      }
+    },
+    "coverage_scope": "packages/**/src as configured in vitest.config.ts",
+    "coverage": {
+      "statements": {
+        "total": 2335,
+        "covered": 2047,
+        "skipped": 0,
+        "pct": 87.66
+      },
+      "branches": {
+        "total": 1857,
+        "covered": 1574,
+        "skipped": 0,
+        "pct": 84.76
+      },
+      "functions": {
+        "total": 350,
+        "covered": 303,
+        "skipped": 0,
+        "pct": 86.57
+      },
+      "lines": {
+        "total": 2056,
+        "covered": 1879,
+        "skipped": 0,
+        "pct": 91.39
+      }
+    },
+    "coverage_thresholds": {
+      "statements": 75,
+      "branches": 65,
+      "functions": 75,
+      "lines": 75
+    },
+    "coverage_gate_passed": true
+  },
+  "independent_review": {
+    "ops_behavior_tests_passed": 15,
+    "tls_checks_passed": 10,
+    "remaining_product_p1_p2_found": false,
+    "pool_repair": {
+      "test_skill_analysis": true,
+      "remaining_p1_p2_found": false,
+      "reviewed_test_sha256": "1ddc263122a5de61a85cf59572a8bed96cddc2631c30055ade06bda6eb5df249"
+    }
+  },
+  "not_verified": [
+    "cross-fault-domain deployment",
+    "old-primary fencing",
+    "N-1 sustained mixed load",
+    "backup restore and PITR",
+    "rolling 30-day SLO",
+    "traces implementation and acceptance"
+  ],
+  "source_sha256_verified_equal_on_wr": true,
+  "source_sha256": {
+    "ops/probe.ts": "2fa71cf500b7f520111f9db07de27a92ff7cbb76f2c363223fa0470f00b0b743",
+    "ops/render.ts": "3d2098fe30b89dcc9b024e81fbb89f483f567d76a947e6772a7d38f0ad7355e4",
+    "scripts/ha.ts": "31f38bc05f4d1b12d0ff5b850b4676ae243773ddb6bdbf492c391522d13d083b",
+    "scripts/build.ts": "0d02c4b2d6e607c6761b94e0684405aa5e70e0b39434f93ef232004cca7a7a4d",
+    "packages/storage-postgres/src/connections.ts": "806685f4c03b021545d231073734e57bc88a3c67584083295644bd5ebb4014a8",
+    "packages/storage-postgres/src/index.ts": "dd2e977cc97d373e50c95508c670566b40613903efd8c7d92b07db55d975177b",
+    "packages/storage-postgres/probes/tls-cluster.ts": "ddd0f262708755dfb4d808cf41f44078884568046f283423b3290a0c80f243a1",
+    "packages/storage-postgres/src/__test__/postgres.integration.test.ts": "1ddc263122a5de61a85cf59572a8bed96cddc2631c30055ade06bda6eb5df249"
+  },
+  "previous_observations": [
+    {
+      "recorded_at": "2026-11-01T07:25:17.358Z",
+      "remote_integration": {
+        "exit_code": 1,
+        "test_files": 16,
+        "files_passed": 15,
+        "tests": 195,
+        "passed": 194,
+        "failed": 1,
+        "duration_seconds": 75.92,
+        "coverage_enabled": true,
+        "complete_coverage_gate_passed": false,
+        "failure": "busy one-connection pool: readiness returns storage_unavailable with poolWaitMs=20 before contention assertions",
+        "log": "workspace/artifacts/production-ha/wr-integration-syncrep-observed.log"
+      }
+    }
+  ],
+  "repair_scope": "Separate data SQL defaults from connection admission budgets and correct deterministic pool/cleanup test preconditions",
+  "regression_evidence": {
+    "sql_budget_before_fix": {
+      "local": {
+        "passed": 30,
+        "failed": 1,
+        "total": 31
+      },
+      "wr": {
+        "passed": 30,
+        "failed": 1,
+        "total": 31
+      },
+      "symptom": "readiness failed while schema lock outlived the connection admission budget but not the configured SQL budget",
+      "remote_log": "workspace/artifacts/production-ha/wr-sql-budget-red.log"
+    },
+    "after_fix": {
+      "local_vitest_passed": 197,
+      "wr_vitest_passed": 197,
+      "cold_admission_budget_ms": 20,
+      "pool_contention_elapsed_ceiling_ms": 150,
+      "maintenance_operation_deadline_ms": 150,
+      "maintenance_elapsed_ceiling_ms": 350,
+      "maintenance_cleanup_ceiling_ms": 1500
+    }
+  }
+}

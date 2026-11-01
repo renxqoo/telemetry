@@ -1,0 +1,58 @@
+{
+  "profile": "development",
+  "fault_domains": 1,
+  "node": "v26.13.0",
+  "postgres": "18.6 (Debian 18.6-1.pgdg12+2)",
+  "cpu": "unknown",
+  "logical_cpus": 2,
+  "host_memory_bytes": 4094455808,
+  "duration_ms": 600429.0437449999,
+  "target_duration_ms": 600000,
+  "target_events_per_second": 500,
+  "target_query_requests_per_second": 10,
+  "event_mix": "95% event / 5% error for batches of 20",
+  "mean_request_event_bytes": 1001.85,
+  "scheduled_events": 300000,
+  "acknowledged_events": 299960,
+  "stored_events": 299960,
+  "unique_events": 299960,
+  "query_requests": 5999,
+  "failures": {
+    "http_503_storage_unavailable": 40,
+    "query_http_503": 1
+  },
+  "failure_samples": [
+    {
+      "at_ms": 88469.019543,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    },
+    {
+      "at_ms": 88494.257168,
+      "reason": "query_http_503",
+      "count": 1
+    },
+    {
+      "at_ms": 88588.485001,
+      "reason": "http_503_storage_unavailable",
+      "count": 20
+    }
+  ],
+  "event_loop_delay_max_ms": 140.247039,
+  "event_loop_delay_p99_ms": 15.540223,
+  "max_process_rss_bytes": 183644160,
+  "ingest": {
+    "requests": 14998,
+    "p50_ms": 9.252959000063129,
+    "p95_ms": 16.24595799999952,
+    "p99_ms": 43.89666700000089
+  },
+  "query": {
+    "requests": 5999,
+    "p50_ms": 5.2086249999993015,
+    "p95_ms": 10.840624999953434,
+    "p99_ms": 20.444791000016266
+  },
+  "interrupted": false,
+  "production_ha_verified": false
+}

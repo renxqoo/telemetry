@@ -1,0 +1,16 @@
+AGENTS.md
+README.md
+docs/ARCHITECTURE.md
+docs/BACKEND.md
+docs/DELIVERY.md
+docs/OPERATIONS.md
+docs/SDK-AND-API.md
+bun.lock
+node_modules/
+dist/
+coverage/
+.next/
+playwright-report/
+test-results/
+artifacts/
+apps/smoke/next-env.d.ts

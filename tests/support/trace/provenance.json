@@ -1,0 +1,21 @@
+{
+  "proto_commit": "40cb2e516c60dd91796d909c7277e36a20c38b55",
+  "binary_generator": "grpcio-tools 1.78.0 / Python protobuf text_format",
+  "json_source": "Manually audited raw OTLP JSON; docs/design/TRACES-SPEC.md sections 3.2 and 3.4",
+  "expected": {
+    "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "span_id": "00f067aa0ba902b7",
+    "duration_ns": "123456789",
+    "end_time_unix_nano": "1793491200123456789",
+    "flags": 257,
+    "int_value": "-9223372036854775808"
+  },
+  "sha256": {
+    "golden.bin": "5df91cb56f7b953874c3245acb577f0bbfee7467d7d2f8bd088e4b97483a90f5",
+    "values.bin": "60f1f789555e9c9f92d57d7a79107c5fb92a12665c4e3d73b707019d423b7bec",
+    "golden.textproto": "0e2c72ffc47822cbe0b74471a4cb1302cf7af82f13283b0c395f22cfb34d9765",
+    "values.textproto": "9306f94b4124253c5c72acf4ad4f568c59ec468d2acedda2ab81c557925d19af",
+    "values.json": "613302933bfabf5ca834386c502b70c242ba9a60708aeccef4c8e1576d08053f",
+    "golden.json": "86bd16030be54d3a06be551a1dc07f7a4881b574c878ea735423ad82c836fe53"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@oneaster/telemetry",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./browser": "./src/browser.ts",
+    "./server": "./src/server.ts",
+    "./react": "./src/react.tsx",
+    "./next/client": "./src/next/client.ts",
+    "./next/server": "./src/next/server.ts",
+    "./tracing/server": "./src/tracing/server.ts"
+  },
+  "dependencies": {
+    "@oneaster/telemetry-protocol": "workspace:*",
+    "zod": "4.6.7"
+  },
+  "peerDependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    }
+  }
+}

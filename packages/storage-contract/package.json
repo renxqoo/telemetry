@@ -1,0 +1,10 @@
+{
+  "name": "@oneaster/storage-contract",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@oneaster/telemetry-protocol": "workspace:*"
+  }
+}
